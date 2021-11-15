@@ -1,7 +1,12 @@
-function App() {
+import { Routes } from "./routes/Routes"
+import { Navigation } from "./components/Navigation"
+
+export const App = () => {
   return (
-    <h1>Arasto</h1>
+    <div>
+      <Routes>
+        <Navigation />
+      </Routes>
+    </div>
   )
 }
-
-export default App
