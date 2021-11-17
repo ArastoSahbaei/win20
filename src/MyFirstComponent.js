@@ -5,7 +5,7 @@ export const MyFirstComponent = ({ name, age }) => {
 
    return (
       <div>
-         <h1>Whatsup {name} age {age}</h1>
+         <h1>Whatsup!!!</h1>
       </div>
    )
 }

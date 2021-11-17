@@ -1,22 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { MyFirstComponent } from '../../MyFirstComponent'
 
 export const HomeView = () => {
-   const [number, setNumber] = useState(0)
-
-   //ComponentWillMount
-   //ComponentWillUnMount
-   //ComponentDidUpdate
-
-   useEffect(() => {
-      alert("First render")
-      return (() => {
-         alert("Last render")
-      })
-   }, [number])
+   const [value, setValue] = useState(true)
 
    return (
       <div>
-         <h1 onClick={() => setNumber(number + 1)}>{number}</h1>
+         {value && <MyFirstComponent />}
+         <button onClick={() => setValue(!value)}>Change value</button>
       </div>
    )
 }
