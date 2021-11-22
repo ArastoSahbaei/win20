@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Axios from 'axios'
+import PokemonAPIService from '../../shared/api/service/PokemonAPIService'
 
 export const DisplayDataView = () => {
    const [serverResponse, setServerResponse] = useState()
@@ -7,10 +7,9 @@ export const DisplayDataView = () => {
    const [search, setSearch] = useState('')
 
    const fetchData = async () => {
-      const API_URL = `https://pokeapi.co/api/v2/pokemon/${search}`
       try {
          setLoading(true)
-         const response = await Axios.get(API_URL)
+         const response = await PokemonAPIService.searchPokemon(search)
          setServerResponse(response)
          setLoading(false)
       } catch (error) {
