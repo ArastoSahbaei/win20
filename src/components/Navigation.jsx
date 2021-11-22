@@ -8,6 +8,7 @@ export const Navigation = () => {
       <div>
          <p onClick={() => navigate(RoutingPath.homeView)}>Home</p>
          <p onClick={() => navigate(RoutingPath.moviesView)}>Movies</p>
+         <p onClick={() => navigate(RoutingPath.displayDataView)}>API</p>
       </div>
    )
 }
